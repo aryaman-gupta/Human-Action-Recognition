@@ -1,4 +1,4 @@
-Human Action Recognition from Depth Data
+# Human Action Recognition from Depth Data
 
 This projects implements a system for human action recognition, using depth sensors from devices such as Microsoft Kinect. Recognition is performed based on the location of joints in the skeleton, during the action sequence. The system can be tested on datasets such as MSR Action3D, which are publically available.
 
