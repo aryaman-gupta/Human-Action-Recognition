@@ -66,6 +66,6 @@ end
 quadsFinal = reshape(quads, size(quads, 1) * size(quads, 2), 6);
 quadsFinal = quadsFinal';
 
-numClusters =30;
+numClusters =128;
 
 [means, covariances, priors] = vl_gmm(quadsFinal, numClusters);

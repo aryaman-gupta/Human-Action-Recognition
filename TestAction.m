@@ -69,8 +69,8 @@ for i = 1:6
     end        
 end
 
-actual = rand (6, 1);
-
+actual = [-1, -1, -1, -1, -1, -1];
+actual = actual';
 [predicted_label, accuracy, prob_estimates] = svmpredict(actual, fisherEncoding, model, '-b 1');
 
 end
