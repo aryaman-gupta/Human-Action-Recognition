@@ -8,15 +8,17 @@ formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 A2 = fscanf(fileID,formatSpec,sizeA);
 
-fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a01_s02_e01_skeleton3D.txt','r');
+fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a03_s01_e01_skeleton3D.txt','r');
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 A3 = fscanf(fileID,formatSpec,sizeA);
 
-fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a02_s02_e01_skeleton3D.txt','r');
+fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a04_s01_e01_skeleton3D.txt','r');
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 A4 = fscanf(fileID,formatSpec,sizeA);
+
+disp('Done reading files');
 
 A = cat(2, A1, A2, A3, A4);
 
@@ -57,9 +59,9 @@ for i = 1:size(B, 2)
         for k = 1:4
             for m = 1:3
                 tempQuad(k, m) = B(combs(j, k), i, m);
-            end            
+                quads(i, j, 1:6) = skeletalQuad(tempQuad');
+            end
         end
-        quads(i, j, 1:6) = skeletalQuad(tempQuad');
     end
 end
 
