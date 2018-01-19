@@ -44,9 +44,9 @@ for i = 1:size(B, 2)
         for k = 1:4
             for m = 1:3
                 tempQuad(k, m) = B(combs(j, k), i, m);
-                quads(i, j, 1:6) = skeletalQuad(tempQuad');
             end
         end
+        quads(i, j, 1:6) = skeletalQuad(rearrangePoints(tempQuad)');
     end
 end
 

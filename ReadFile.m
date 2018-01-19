@@ -59,7 +59,7 @@ for i = 1:size(B, 2)
                 tempQuad(k, m) = B(combs(j, k), i, m);
             end            
         end
-        quads(i, j, 1:6) = skeletalQuad(tempQuad');
+        quads(i, j, 1:6) = skeletalQuad(rearrangePoints(tempQuad)');
     end
 end
 
