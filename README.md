@@ -15,7 +15,7 @@ The entire procedure can be divided into the following steps:
 
 To run the system, begin by running the ReadFile script which generates the GMM and stores its parameters as global variables. Then, training action sequences are passed to the ComputeFisherVector function, which returns 6 FVs for each action sequence passed to it. The FVs obtained are passed to the Train_SVM function in the next step, along with their labels. This function returns the parameters of the trained SVM model. This model, along with the testing action sequences, are passed to the TestAction function, which returns the predicted labels.
 
-At the moment, the system is in prototype stage. It uses only four action sequences to generate the GMM, and performs only binary classification. However, it can easily be extended to be complete.
+At the moment, the system is in prototype stage.
 
 
 [1] G. Evangelidis, G. Singh, R. Horaud, "Skeletal Quads: Human action 
