@@ -69,7 +69,9 @@ fisherFinal = [fisherEncoding(1, :), fisherEncoding(2, :), fisherEncoding(3, :),
 
 for j = 1:size(fisherFinal, 2)
     fisherFinal(1, j) = sign(fisherFinal(1, j)) * (abs(fisherFinal(1, j)) ^ 0.3);
-end
+end        
+
+
 
 end
 

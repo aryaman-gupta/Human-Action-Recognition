@@ -9,10 +9,9 @@ end
 
 for i = 1:size(FV, 3)
     for j = 1:size(FV, 1)
-        model = svmtrain(labels, trainData, '-c 1 -g 0.07 -b 1');
+        model = svmtrain(labels, trainData, '');
     end
 end
 
 
 end
-

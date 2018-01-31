@@ -1,19 +1,19 @@
-fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a01_s01_e01_skeleton3D.txt','r');
+fileID = fopen('../MSRAction3D/MSRAction3DSkeleton(20joints)/a01_s01_e01_skeleton.txt','r');
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 A1 = fscanf(fileID,formatSpec,sizeA);
 
-fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a02_s01_e01_skeleton3D.txt','r');
+fileID = fopen('../MSRAction3D/MSRAction3DSkeleton(20joints)/a02_s01_e01_skeleton.txt','r');
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 A2 = fscanf(fileID,formatSpec,sizeA);
 
-fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a01_s02_e01_skeleton3D.txt','r');
+fileID = fopen('../MSRAction3D/MSRAction3DSkeleton(20joints)/a01_s02_e01_skeleton.txt','r');
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 A3 = fscanf(fileID,formatSpec,sizeA);
 
-fileID = fopen('../MSRAction3D/MSRAction3DSkeletonReal3D/a02_s02_e01_skeleton3D.txt','r');
+fileID = fopen('../MSRAction3D/MSRAction3DSkeleton(20joints)/a02_s02_e01_skeleton.txt','r');
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 A4 = fscanf(fileID,formatSpec,sizeA);
@@ -22,7 +22,7 @@ A = cat(2, A1, A2, A3, A4);
 
 A = A';
 l = size(A, 1);
-B=reshape(A,20,l/20,4);
+B = reshape(A,20,l/20,4);
 
 
 tempComp = [0 0 0 0];
@@ -66,6 +66,6 @@ end
 quadsFinal = reshape(quads, size(quads, 1) * size(quads, 2), 6);
 quadsFinal = quadsFinal';
 
-numClusters =128;
+numClusters = 128;
 
 [means, covariances, priors] = vl_gmm(quadsFinal, numClusters);
