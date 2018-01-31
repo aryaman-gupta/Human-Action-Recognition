@@ -64,7 +64,7 @@ fisherEncoding(5, :) = vl_fisher(quadsFinal(1:6, length/2+1:length), means, cova
 
 fisherEncoding(6, :) = vl_fisher(quadsFinal(1:6, 1:length), means, covariances, priors, 'improved');
 
-fisherFinal = [fisherEncoding(1, :), fisherEncoding(2, :), fisherEncoding(3, :),fisherEncoding(4, :), fisherEncoding(5, :), fisherEncoding(6, :)];
+fisherFinal = [fisherEncoding(1, :), fisherEncoding(2, :), fisherEncoding(3, :), fisherEncoding(4, :), fisherEncoding(5, :), fisherEncoding(6, :)];
 
 
 for j = 1:size(fisherFinal, 2)
