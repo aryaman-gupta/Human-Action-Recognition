@@ -1,7 +1,0 @@
-%The script assumes that the MSRAction3D dataset is stored in the parent
-%folder of the working directory
-cd ..
-cd MSRAction3D\
-cd MSRAction3DSkeleton(20joints)\
-l = ls;
-cd ..\..\Human-Action-Recognition\
