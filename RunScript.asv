@@ -26,7 +26,7 @@ totalTrainData(:, startIndex:1000000) = [];
 
 FV = zeros(300, 9216);
 cnt = 1;
-labels = zeros(1, 300);
+labels = 1;
 for i = 1:size(fileList, 2)
     k = fileList(i, 2:3); % Action number
     aNum = 10 * int16(k(1)-48) + int16(k(2)-48);
@@ -34,12 +34,11 @@ for i = 1:size(fileList, 2)
     sNum = 10 * int16(k2(1)-48) + int16(k2(2)-48);
     if(ismember(aNum, AS1) && rem(sNum, 2) ~= 0 )
         FV(cnt, :) = ComputeFisherVector(fileList(i, :), means, covariances, priors);
-        labels(cnt) = aNum;
-        cnt = cnt + 1;        
+        cnt = cnt + 1;
+        labels = [labels, aNum];
     end
 end
 
-FV(cn
 
 FV(1, :) = ComputeFisherVector(fileList(5, :), means, covariances, priors);
 FV(2, :) = ComputeFisherVector(fileList(6, :), means, covariances, priors);

@@ -19,4 +19,3 @@ for i = 1:size(B, 2)
 end
 
 end
-

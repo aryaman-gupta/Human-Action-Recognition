@@ -1,4 +1,4 @@
-function [ fileData ] = readFile2( fileName )
+function [ fileLength, fileData ] = readFile2( fileName )
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 cd ..
@@ -8,6 +8,7 @@ fileID = fopen(fileName,'r');
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 fileData = fscanf(fileID,formatSpec,sizeA);
+fileLength = size(fileData, 2);
 % Return to working directory
 cd ..\..\Human-Action-Recognition\
 end
