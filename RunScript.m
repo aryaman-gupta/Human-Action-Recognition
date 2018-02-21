@@ -9,7 +9,7 @@ fileList = ls;
 cd ..\..\Human-Action-Recognition\
 
 % AS1 = [2 3 5 6 10 13 18 20]; % Action Set 1
-AS1 = [2 3];
+AS1 = [2];
 totalTrainData = zeros(4, 1000000);
 startIndex = 1;
 

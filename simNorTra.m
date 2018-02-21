@@ -70,10 +70,12 @@ end
 % rotation axis
 %r = cross(p2,[0 0 1]');
 
-r = [p2(2); -p2(1); 0];
-if(no2 ~= 0)
-    r = r/sqrt(no2);
-end
+% r = [p2(2); -p2(1); 0];
+% if(no2 ~= 0)
+%     r = r/sqrt(no2);
+% end
+
+r = [1/sqrt(2), -1/sqrt(2), 0];
 
 C = cos(phi);
 S = sin(phi);
