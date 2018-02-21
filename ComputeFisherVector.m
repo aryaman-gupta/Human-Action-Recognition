@@ -2,7 +2,7 @@ function [ fisherFinal ] = ComputeFisherVector( fileName, means, covariances, pr
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
 
-jointsData = readFile2(fileName);
+[~, jointsData] = readFile2(fileName);
 
 quads = GenerateQuads(jointsData);
 

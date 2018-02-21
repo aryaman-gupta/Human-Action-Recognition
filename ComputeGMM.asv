@@ -24,7 +24,7 @@ t1 = isnan(quads);
 % end
 % 
 % disp('inf');
-quads(t1==1) = 0;
+q
 t2 = isinf(quads);
 % for i = 1:size(t2, 1)
 %     for j = 1:size(t2, 2)
@@ -36,7 +36,7 @@ t2 = isinf(quads);
 %         end
 %     end
 % end
-quads(t2 == 1) = 0;
+
 quadsFinal = reshape(quads, size(quads, 1) * size(quads, 2), 6);
 quadsFinal = quadsFinal';
 

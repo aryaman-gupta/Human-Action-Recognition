@@ -4,7 +4,10 @@ function [ fileLength, fileData ] = readFile2( fileName )
 cd ..
 cd MSRAction3D\
 cd MSRAction3DSkeleton(20joints)\
-fileID = fopen(fileName,'r');
+[fileID, m] = fopen(fileName,'r');
+if(fileID == -1)
+    disp(m);
+end
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 fileData = fscanf(fileID,formatSpec,sizeA);

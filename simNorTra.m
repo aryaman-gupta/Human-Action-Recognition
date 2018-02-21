@@ -53,8 +53,13 @@ no2 = sum(p2(1:2).*p2(1:2));
 no = 2*(no2+p2(3)*p2(3));
 
 %phi = acos(sum(p2(1:2))/norm(p2)/sqrt(2));
-phi = acos(sum(p2(1:2))/sqrt(no));
-
+if(no ~= 0)
+    phi = acos(sum(p2(1:2))/sqrt(no));
+else
+    phi = 0;
+    disp('no = 0');
+    Pin
+end
 if p2(3)>0
     phi = -phi+0.615479708670387;
 else
@@ -66,8 +71,9 @@ end
 %r = cross(p2,[0 0 1]');
 
 r = [p2(2); -p2(1); 0];
-
-r = r/sqrt(no2);
+if(no2 ~= 0)
+    r = r/sqrt(no2);
+end
 
 C = cos(phi);
 S = sin(phi);
