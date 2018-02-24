@@ -11,6 +11,11 @@ end
 formatSpec = '%f %f %f %f';
 sizeA = [4 Inf];
 fileData = fscanf(fileID,formatSpec,sizeA);
+% if(ismember(0, fileData(1:3, :)))
+%     disp('File may be corrupt');
+%     fileName
+%     find(fileData(1:3, :) == 0)
+% end
 fileLength = size(fileData, 2);
 % Return to working directory
 cd ..\..\Human-Action-Recognition\
