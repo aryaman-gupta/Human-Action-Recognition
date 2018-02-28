@@ -22,9 +22,9 @@ fisherEncoding(6, :) = vl_fisher(quadsFinal(1:6, 1:length), means, covariances, 
 
 fisherFinal = [fisherEncoding(1, :), fisherEncoding(2, :), fisherEncoding(3, :), fisherEncoding(4, :), fisherEncoding(5, :), fisherEncoding(6, :)];
 
-% for j = 1:size(fisherFinal, 2)
-%     fisherFinal(1, j) = sign(fisherFinal(1, j)) * (abs(fisherFinal(1, j)) ^ 0.3);
-% end
+for j = 1:size(fisherFinal, 2)
+    fisherFinal(1, j) = sign(fisherFinal(1, j)) * (abs(fisherFinal(1, j)) ^ 0.3);
+end
 
 end
 
