@@ -1,3 +1,4 @@
 /_MACOSX/
 *.mexw64
 *.txt
+*.mat
